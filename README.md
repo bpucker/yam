@@ -2,68 +2,83 @@
 
 (preprint is coming soon)
 
+Generation of a stacked barplot based on the summary string provided by [BUSCO](https://busco.ezlab.org/).
 
 python BUSCO_plot.py \
 --in <INPUT_FILE_WITH_BUSCO_SUMMARY_STRINGS> \
---fig <FIGURE_FILE (PDF)> \
+--fig <FIGURE_FILE (PDF)>
 
+
+Analyses a coverage file and produces a histogram to illustrate the frequency of different coverage values.
 
 python analyze_cov_per_contig.py \
 --cov <COVERAGE_FILE> \
---out <OUTPUT_FOLDER> \
+--out <OUTPUT_FOLDER>
 
+
+Repeat maskings with different reference databases can be combined. A base is masked if it is masked in at least one input file.
 
 python combine_repeat_masking.py \
 --in1 <INPUT_FILE2> \
 --in2 <INPUT_FILE1> \
---out <OUTPUT_FILE> \
+--out <OUTPUT_FILE>
 
+
+A histogram is produced based on a coverage file.
 
 python cov2hist.py \
 --cov <COVERAGE_FILE> \
---fig <FIGURE_FILENAME> \
+--fig <FIGURE_FILENAME>
 
 
-python cov_hist_per_contig.py
---cov <COVERAGE_FILE>
+A coverage histogram is produced, but using the average value per contig instead of per base values.
+
+python cov_hist_per_contig.py \
+--cov <COVERAGE_FILE> \
 --out <OUTPUT_FOLDER>
 
 
-python gene_selector.py
---list <HOMOLOGY_BASED_ANALYSIS_RESULTS (TXT)>
---gff <INPUT_FILE (FASTA)>
---out <OUTPUT_FOLDER>
-optional:
---fasta <MATCHING_ASSEMBLY_FILE>
---name <NAME_OF_OUTPUT_FILES>["x"]
---sr <FLOAT, score ratio cutoff>[0.1]
+Selection of genes (coding sequences and peptides) after homology_based_gene_selection.py was applied. The results of different cutoff values can be evaluated to find the most appropriate settings.
+
+python gene_selector.py \
+--list <HOMOLOGY_BASED_ANALYSIS_RESULTS (TXT)> \
+--gff <INPUT_FILE (FASTA)> \
+--out <OUTPUT_FOLDER> \
+optional: \
+--fasta <MATCHING_ASSEMBLY_FILE> \
+--name <NAME_OF_OUTPUT_FILES>["x"] \
+--sr <FLOAT, score ratio cutoff>[0.1] \
 --cov <FLOAT, percentage of query aligned>[0.1]
 
 
+This scripts performs BLAST-based comparison of genes on the peptide level to identify similarity of predicted gene products to existing annotations in databases. The score of hits against the database is normalized by the score against the sequence itself.
 
-python homology_based_gene_selection.py
---query <INPUT_FILE (FASTA)>
---subject <INPUT_FILE (FASTA)>
+python homology_based_gene_selection.py \
+--query <INPUT_FILE (FASTA)> \
+--subject <INPUT_FILE (FASTA)> \
 --out <OUTPUT_FOLDER>
 
 
+Functional annotations can be transferred from Arabidopsis thaliana ([Araport11](https://www.araport.org/)) after running [OrthoFinder2](https://github.com/davidemms/OrthoFinder) for the identification of orthologs.
 
-python map_annotation_via_orthologs.py\n
---in <INPUT_FILE>
+python map_annotation_via_orthologs.py \
+--in <INPUT_FILE> \
 --out <OUTPUT_FILE>
       
-      
 
-python phasing_status_per_gene.py
---cov <COVERAGE_FILE>
---gff <ANNOTATION_FILE>
---out <OUTPUT_FOLDER>
+
+
+python phasing_status_per_gene.py \
+--cov <COVERAGE_FILE> \
+--gff <ANNOTATION_FILE> \
+--out <OUTPUT_FOLDER> \
 --vcf <VCF_FILE>
 
 
-python reduce_to_tig.py
---in <INPUT_FILE>
+python reduce_to_tig.py \
+--in <INPUT_FILE> \
 --out <OUTPUT_FILE>
+
 
 
 Additional scripts are located here:
