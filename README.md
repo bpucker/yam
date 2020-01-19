@@ -66,7 +66,7 @@ python map_annotation_via_orthologs.py \
 --out <OUTPUT_FILE>
       
 
-
+Average coverage per gene is calculated and visualized in a histogram. Based on the known average sequecing depth, genes can be classified into 'phased' and 'merged'.
 
 python phasing_status_per_gene.py \
 --cov <COVERAGE_FILE> \
@@ -74,6 +74,9 @@ python phasing_status_per_gene.py \
 --out <OUTPUT_FOLDER> \
 --vcf <VCF_FILE>
 
+
+Contig names can be reduced to tigXXX where XXX represents the number. This allows to remove all additional entries from the header which might have accumulated during the assmbly and polishing process.
+WARNING: All contig numbers may only occur ones in the file. Otherwise, contigs would be lost.
 
 python reduce_to_tig.py \
 --in <INPUT_FILE> \
