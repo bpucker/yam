@@ -1,6 +1,6 @@
 ### Boas Pucker ###
 ### bpucker@cebitec.uni-bielefeld.de ###
-### v0.15 ###
+### v0.2 ###
 
 __usage__ = """
 					python phasing_status_per_gene.py
@@ -76,7 +76,10 @@ def load_genes( gff_file ):
 				if parts[2] == "gene":
 					try:
 						try:
-							genes.update( { re.findall( "tig\d+\.g\d+", parts[-1] )[0]: { 'chr': parts[0], 'start': int(parts[3]), 'end': int( parts[4] ) } } )
+							try:
+								genes.update( { re.findall( "contig\d+\.g\d+", parts[-1] )[0]: { 'chr': parts[0], 'start': int(parts[3]), 'end': int( parts[4] ) } } )
+							except IndexError:
+								genes.update( { re.findall( "tig\d+\.g\d+", parts[-1] )[0]: { 'chr': parts[0], 'start': int(parts[3]), 'end': int( parts[4] ) } } )
 						except IndexError:
 							if ';' in parts[-1]:
 								genes.update( { parts[-1].split(';')[0].split('=')[1]: { 'chr': parts[0], 'start': int(parts[3]), 'end': int( parts[4] ) } } )
@@ -145,9 +148,15 @@ def load_variants( vcf_file, min_allele_freq, max_allele_freq ):
 							if ( ref+alt ) > 0:
 								if min_allele_freq < float( alt ) / ( ref+alt ) < max_allele_freq:
 									try:
-										variants[ re.findall( "tig\d+", parts[0] )[0] ].append( int( parts[1] ) )
+										try:
+											variants[ re.findall( "contig\d+", parts[0] )[0] ].append( int( parts[1] ) )
+										except IndexError:
+											variants[ re.findall( "tig\d+", parts[0] )[0] ].append( int( parts[1] ) )
 									except KeyError:
-										variants.update( { re.findall( "tig\d+", parts[0] )[0]: [ int( parts[1] ) ] } )
+										try:
+											variants.update( { re.findall( "contig\d+", parts[0] )[0]: [ int( parts[1] ) ] } )
+										except IndexError:
+											variants.update( { re.findall( "tig\d+", parts[0] )[0]: [ int( parts[1] ) ] } )
 					except IndexError:
 						print parts[-1]
 			line = f.readline()
