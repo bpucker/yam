@@ -6,6 +6,9 @@ __usage__ = """
 					python reduce_to_tig.py
 					--in <INPUT_FILE>
 					--out <OUTPUT_FILE>
+					
+					WARNING: contig names need to be unique!
+					(not working for splitted contigs e.g. after medaka polishing)
 					"""
 
 import re, sys
