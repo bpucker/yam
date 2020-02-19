@@ -1,6 +1,7 @@
 # Python scripts associated with yam genome assembly
 
-(preprint is coming soon)
+Preprint: Siadjeu C.*, Pucker B.*, Viehoever P., Albach D. and Weisshaar B. (2020). High contiguity de novo genome sequence assembly of Trifoliate yam (Dioscorea dumetorum) using long read sequencing. bioRxiv 2020.01.31.928630. doi:[10.1101/2020.01.31.928630](https://doi.org/10.1101/2020.01.31.928630).
+
 
 Generation of a stacked barplot based on the summary string provided by [BUSCO](https://busco.ezlab.org/).
 
