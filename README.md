@@ -114,3 +114,4 @@ Pucker, B., Feng, T., Brockington, S. (2019). Next generation sequencing to inve
 
 Pucker B, Rückert C, Stracke R, Viehöver P, Kalinowski J, Weisshaar B. Twenty-Five Years of Propagation in Suspension Cell Culture Results in Substantial Alterations of the Arabidopsis Thaliana Genome. Genes. 2019. doi:[10.3390/genes10090671](https://www.mdpi.com/2073-4425/10/9/671/htm).
 
+Siadjeu C.*, Pucker B.*, Viehoever P., Albach D. and Weisshaar B. (2020). High contiguity de novo genome sequence assembly of Trifoliate yam (Dioscorea dumetorum) using long read sequencing. bioRxiv 2020.01.31.928630. doi:[10.1101/2020.01.31.928630](https://doi.org/10.1101/2020.01.31.928630).
