@@ -1,5 +1,7 @@
 # Python scripts associated with yam genome assembly
 
+Siadjeu C.+, **Pucker B.+**, Viehoever P., Albach D. and Weisshaar B. (2020). High contiguity de novo genome sequence assembly of Trifoliate yam (Dioscorea dumetorum) using long read sequencing. Genes. doi:[10.3390/genes11030274](https://www.mdpi.com/2073-4425/11/3/274/htm).
+
 
 Generation of a stacked barplot based on the summary string provided by [BUSCO](https://busco.ezlab.org/).
 
@@ -114,5 +116,3 @@ Pucker, B., Holtgraewe, D., Stadermann, K. B., Frey, K., Huettel, B., Reinhardt,
 Pucker, B., Feng, T., Brockington, S. (2019). Next generation sequencing to investigate genomic diversity in Caryophyllales. bioRxiv 646133; doi:[10.1101/646133](https://www.biorxiv.org/content/10.1101/646133v2.full).
 
 Pucker B, Rückert C, Stracke R, Viehöver P, Kalinowski J, Weisshaar B. Twenty-Five Years of Propagation in Suspension Cell Culture Results in Substantial Alterations of the Arabidopsis Thaliana Genome. Genes. 2019. doi:[10.3390/genes10090671](https://www.mdpi.com/2073-4425/10/9/671/htm).
-
-Siadjeu C.*, Pucker B.*, Viehoever P., Albach D. and Weisshaar B. (2020). High contiguity de novo genome sequence assembly of Trifoliate yam (Dioscorea dumetorum) using long read sequencing. bioRxiv 2020.01.31.928630. doi:[10.1101/2020.01.31.928630](https://doi.org/10.1101/2020.01.31.928630).
