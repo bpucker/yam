@@ -1,7 +1,5 @@
 # Python scripts associated with yam genome assembly
 
-Preprint: Siadjeu C.*, Pucker B.*, Viehoever P., Albach D. and Weisshaar B. (2020). High contiguity de novo genome sequence assembly of Trifoliate yam (Dioscorea dumetorum) using long read sequencing. bioRxiv 2020.01.31.928630. doi:[10.1101/2020.01.31.928630](https://doi.org/10.1101/2020.01.31.928630).
-
 
 Generation of a stacked barplot based on the summary string provided by [BUSCO](https://busco.ezlab.org/).
 
@@ -102,6 +100,8 @@ https://github.com/bpucker/Nd1_PacBio
 
 
 # References
+
+Siadjeu C.+, **Pucker B.+**, Viehoever P., Albach D. and Weisshaar B. (2020). High contiguity de novo genome sequence assembly of Trifoliate yam (Dioscorea dumetorum) using long read sequencing. Genes. doi:[10.3390/genes11030274](https://www.mdpi.com/2073-4425/11/3/274/htm).
 
 Pucker, B., Holtgräwe, D., Rosleff Sörensen, T., Stracke, R., Viehöver, P., and Weisshaar, B. (2016). A de novo Genome Sequence Assembly of the Arabidopsis thaliana Accession Niederzenz-1 Displays Presence/Absence Variation and Strong Synteny. PloS-ONE 11:e0164321. doi:[10.1371/journal.pone.0164321](https://doi.org/10.1371/journal.pone.0164321).
 
